@@ -27,10 +27,40 @@ class Perceptron:
 
 #test code
 neuron = Perceptron(inputs=2)
-neuron.set_weights([10,10,-15]) #AND
+neuron.set_weights([5,5,-5]) #AND
 
-print("Gate:")
+print("Gate AND:")
 print ("0 0 = {0:.10f}".format(neuron.run([0,0])))
 print ("0 1 = {0:.10f}".format(neuron.run([0,1])))
 print ("1 0 = {0:.10f}".format(neuron.run([1,0])))
 print ("1 1 = {0:.10f}".format(neuron.run([1,1])))
+
+#test OR code
+neuron2 = Perceptron(inputs=2)
+neuron2.set_weights([10,10,-5]) #OR
+
+print("Gate OR:")
+print ("0 0 = {0:.10f}".format(neuron2.run([0,0])))
+print ("0 1 = {0:.10f}".format(neuron2.run([0,1])))
+print ("1 0 = {0:.10f}".format(neuron2.run([1,0])))
+print ("1 1 = {0:.10f}".format(neuron2.run([1,1])))
+
+#test NAND code
+neuron2 = Perceptron(inputs=2)
+neuron2.set_weights([10,10,-10]) #NAND
+
+print("Gate NAND:")
+print ("0 0 = {0:.10f}".format(neuron2.run([0,0])))
+print ("0 1 = {0:.10f}".format(neuron2.run([0,1])))
+print ("1 0 = {0:.10f}".format(neuron2.run([1,0])))
+print ("1 1 = {0:.10f}".format(neuron2.run([1,1])))
+
+#test NOR code
+neuron2 = Perceptron(inputs=2)
+neuron2.set_weights([10,10,-5]) #NOR
+
+print("Gate NOR:")
+print ("0 0 = {0:.10f}".format(neuron2.run([0,0])))
+print ("0 1 = {0:.10f}".format(neuron2.run([0,1])))
+print ("1 0 = {0:.10f}".format(neuron2.run([1,0])))
+print ("1 1 = {0:.10f}".format(neuron2.run([1,1])))
